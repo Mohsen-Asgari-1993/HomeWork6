@@ -37,6 +37,6 @@ public class Main {
         System.out.println(list);
         System.out.println("is 99 in list? : "+list.contain(99));
 
-
+        System.out.println("Bye");
     }
 }
