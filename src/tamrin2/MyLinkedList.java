@@ -160,4 +160,20 @@ public class MyLinkedList<E> {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        String list = "[";
+        MyNode current = this.first;
+        while (current != null) {
+            if (current.next == null) {
+                list += current.item + "]";
+                return list;
+            } else {
+                list += current.item + ", ";
+                current = current.next;
+            }
+        }
+        return null;
+    }
 }
