@@ -25,9 +25,18 @@ public class Main {
 
         list.search(8);
 
+
         System.out.println(list.contain(10));
         list.insert(99);
         System.out.println(list.contain(99));
+
+        System.out.println(list);
+        System.out.println("is 10 in list? : "+list.contain(10));
+        list.insert(99);
+
+        System.out.println(list);
+        System.out.println("is 99 in list? : "+list.contain(99));
+
 
     }
 }
