@@ -90,4 +90,34 @@ public class MyLinkedList<E> {
             System.out.println("Key not found ");
         }
     }
+
+    public void deleteByPosition(int index) {
+        if (index >= this.size()) {
+            System.out.println("index not found");
+            return;
+        }
+        MyNode current = this.first, prev = null;
+        if (index == 0 && current != null) {
+            this.first = current.next;
+            System.out.println("element in " + index + " position deleted ");
+            size--;
+            return;
+        }
+        int counter = 0;
+        while (current != null) {
+            if (index == counter) {
+                prev.next = current.next;
+                System.out.println("element in " + index + " position deleted ");
+                size--;
+                break;
+            } else {
+                prev = current;
+                current = current.next;
+                counter++;
+            }
+        }
+        if (current == null) {
+            System.out.println("index not found");
+        }
+    }
 }
