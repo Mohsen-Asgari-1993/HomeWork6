@@ -69,4 +69,25 @@ public class MyLinkedList<E> {
         }
         System.out.println("index not found ");
     }
+
+    public void deleteByKey(E e) {
+        MyNode currnet = this.first, prev = null;
+        if (currnet != null && currnet.item == e) {
+            this.first = currnet.next;
+            System.out.println(e + " found and deleted");
+            size--;
+            return;
+        }
+        while (currnet != null && currnet.item != e) {
+            prev = currnet;
+            currnet = currnet.next;
+        }
+        if (currnet != null) {
+            prev.next = currnet.next;
+            System.out.println(e + " found and deleted");
+            size--;
+        } else {
+            System.out.println("Key not found ");
+        }
+    }
 }
