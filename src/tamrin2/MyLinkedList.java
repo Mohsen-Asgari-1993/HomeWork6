@@ -39,4 +39,34 @@ public class MyLinkedList<E> {
         }
         size++;
     }
+
+    public void addNode(E e, int index) {
+        MyNode node = new MyNode(e);
+        MyNode current = this.first, prev = null;
+        if (this.first == null) {
+            this.first = node;
+            size++;
+        } else {
+            if (index == 0) {
+                node.next = current;
+                this.first = node;
+                size++;
+                return;
+            }
+            int counter = 0;
+            while (current != null) {
+                if (index == counter) {
+                    node.next = current;
+                    prev.next = node;
+                    size++;
+                    return;
+                } else {
+                    prev = current;
+                    current = current.next;
+                    counter++;
+                }
+            }
+        }
+        System.out.println("index not found ");
+    }
 }
