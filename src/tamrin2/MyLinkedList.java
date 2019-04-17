@@ -144,4 +144,20 @@ public class MyLinkedList<E> {
         }
         System.out.println("index not found ");
     }
+
+    public boolean contain(E e) {
+        MyNode node = this.first;
+        if (isNull()) {
+            return false;
+        } else {
+            while (node != null) {
+                if (node.item == e) {
+                    return true;
+                } else {
+                    node = node.next;
+                }
+            }
+        }
+        return false;
+    }
 }
