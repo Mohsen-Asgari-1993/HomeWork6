@@ -120,4 +120,28 @@ public class MyLinkedList<E> {
             System.out.println("index not found");
         }
     }
+
+    public void search(int index) {
+        MyNode node = this.first;
+        if (isNull() || index >= size()) {
+            System.out.println("index not found");
+            return;
+        } else {
+            if (index == 0 && node != null) {
+                System.out.println(node.item);
+                return;
+            }
+            int counter = 0;
+            while (node != null) {
+                if (index == counter) {
+                    System.out.println(node.item);
+                    return;
+                } else {
+                    node = node.next;
+                    counter++;
+                }
+            }
+        }
+        System.out.println("index not found ");
+    }
 }
