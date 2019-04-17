@@ -18,4 +18,17 @@ public class Main {
             }
         }
     }
+
+    private static void sortArrayList(ArrayList<Integer> arrayList) {
+        if (arrayList.size() == 0) {
+            System.out.println(" Your List is Empty!!!");
+        } else {
+            if (arrayList.size() % 2 != 0) {
+                arrayList.remove(arrayList.size() - 1);
+                sort(arrayList);
+            } else {
+                sort(arrayList);
+            }
+        }
+    }
 }
