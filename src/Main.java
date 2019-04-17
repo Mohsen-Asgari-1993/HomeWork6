@@ -31,4 +31,12 @@ public class Main {
             }
         }
     }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        initializeList(list);
+        System.out.println(list);
+        sortArrayList(list);
+        System.out.println(list);
+    }
 }
